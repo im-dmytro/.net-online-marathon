@@ -196,5 +196,48 @@ namespace sprint01
         }
 
     }
+    public abstract class CloseableResource
+    {
+        public void Close()
+        {
 
+        }
+    }
+    class DisposePatternImplementer : CloseableResource, IDisposable
+    {
+        private bool disposed = false;
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+
+
+        protected void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+
+                if (disposing)
+                {
+                    Console.WriteLine("Disposing by developer");
+
+                }
+                else
+                {
+                    Console.WriteLine("Disposing by GC");
+                }
+                Close();
+                disposed = true;
+            }
+
+        }
+        ~DisposePatternImplementer()
+        {
+            Dispose(false);
+
+        }
+
+    }
 }
