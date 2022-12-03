@@ -240,4 +240,57 @@ namespace sprint01
         }
 
     }
+
+    public class Person
+    {
+        protected int yearOfBirth;
+        protected string healthInfo;
+        protected string name;
+        public virtual string GetHealthStatus()
+        {
+            return $"{name}: {yearOfBirth}. {healthInfo}";
+        }
+
+        public Person(int yearOfBirth, string name, string healthInfo)
+        {
+            this.yearOfBirth = yearOfBirth;
+            this.name = name;
+            this.healthInfo = healthInfo;
+        }
+
+    }
+    public class Child : Person
+    {
+
+        string childIDNumber;
+        public Child(int yearOfBirth, string name, string healthInfo, string childIDNumber) : base(yearOfBirth, name, healthInfo)
+        {
+            this.childIDNumber = childIDNumber;
+        }
+        public override string GetHealthStatus()
+        {
+            return base.GetHealthStatus();
+        }
+        public override string ToString()
+        {
+            return $"{name} {childIDNumber}";
+        }
+    }
+    public class Adult : Person
+    {
+
+        private string passportNumber;
+        public Adult(int yearOfBirth, string name, string healthInfo, string passportNumber) : base(yearOfBirth, name, healthInfo)
+        {
+            this.passportNumber = passportNumber;
+        }
+        public override string GetHealthStatus()
+        {
+            return base.GetHealthStatus();
+        }
+        public override string ToString()
+        {
+            return $"{name} {passportNumber}";
+        }
+    }
 }
