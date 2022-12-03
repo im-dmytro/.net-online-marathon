@@ -61,5 +61,36 @@ namespace sprint01
             return base.GetHashCode();
         }
     }
+    class Point
+    {
+        int x, y;
+        public Point(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+        internal int[] GetXYPair()
+        {
+            int[] point = new int[2];
+            point[0] = x;
+            point[1] = y;
+            return point;
+        }
+        protected internal double Distance(int x, int y)
+        {
+            return Distance(this, new Point(x, y));
+        }
+        protected internal double Distance(Point point)
+        {
+            return Distance(this, point);
+        }
+        public static explicit operator double(Point point) => Distance(point, new Point(0, 0));
+        static double Distance(Point point1, Point point2)
+        {
+            double distance = Math.Sqrt(Math.Pow(point2.x - point1.x, 2) + Math.Pow(point2.y - point1.y, 2));
+            return distance;
+        }
+    }
+
 
 }
