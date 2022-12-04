@@ -1,0 +1,7 @@
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint02_02\bin\Debug\sprint02_02.exe.config
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint02_02\bin\Debug\sprint02_02.exe
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint02_02\bin\Debug\sprint02_02.pdb
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint02_02\obj\Debug\sprint02_02.csproj.AssemblyReference.cache
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint02_02\obj\Debug\sprint02_02.csproj.CoreCompileInputs.cache
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint02_02\obj\Debug\sprint02_02.exe
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint02_02\obj\Debug\sprint02_02.pdb
