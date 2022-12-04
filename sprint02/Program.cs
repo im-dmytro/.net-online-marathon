@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace sprint02
+namespace sprint02_1
 {
     class Program
     {
