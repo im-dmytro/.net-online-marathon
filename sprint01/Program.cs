@@ -10,6 +10,9 @@ namespace sprint01
     {
         static void Main(string[] args)
         {
+            Fraction frac1 = new Fraction(45, 25);
+            Console.WriteLine(frac1*frac1);
+            Console.ReadLine();
         }
     }
 }
