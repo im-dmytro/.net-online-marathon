@@ -71,36 +71,30 @@ namespace sprint01
         }
         internal int[] GetXYPair()
         {
-            int[] point = new int[2];
-            point[0] = x;
-            point[1] = y;
-            return point;
+            return new int[] { x,y};
         }
         protected internal double Distance(int x, int y)
         {
-            return Distance(this, new Point(x, y));
+            return Math.Sqrt(Math.Pow(this.x - x, 2) + Math.Pow(this.y - y, 2));
         }
         protected internal double Distance(Point point)
         {
-            return Distance(this, point);
+            return Distance(point.x,point.y);
         }
-        public static explicit operator double(Point point) => Distance(point, new Point(0, 0));
-        static double Distance(Point point1, Point point2)
-        {
-            double distance = Math.Sqrt(Math.Pow(point2.x - point1.x, 2) + Math.Pow(point2.y - point1.y, 2));
-            return distance;
-        }
+        public static explicit operator double(Point anotherPoint) => anotherPoint.Distance(0, 0);
+      
     }
     class Fraction
     {
         readonly int numerator, denominator;
         public Fraction(int numerator, int denominator)
         {
-            if (numerator < 0 && denominator < 0)
+            if ((numerator < 0 && denominator < 0)|| denominator < 0)
             {
-                numerator *= -1;
-                denominator *= -1;
+                numerator = -numerator;
+                denominator = -denominator;
             }
+
             int hcf = Find_HCF(numerator, denominator);
             this.numerator = numerator/ hcf;
             this.denominator = denominator/hcf;
@@ -161,7 +155,6 @@ namespace sprint01
         }
         public static int Find_LCM(int a, int b)
         {
-
             int lcm = (a * b) / Find_HCF(a, b);
             return lcm;
         }
@@ -173,14 +166,18 @@ namespace sprint01
         }
         public override bool Equals(object obj)
         {
-            var item = obj as Fraction;
+            if(obj!=null&&obj is Fraction item)
+            {
+                return item.numerator == numerator &&
+               item.denominator == denominator;
+            }
+            return false;
         
-            return item.numerator == numerator &&
-                item.denominator == denominator;
+           
         }
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return ToString().GetHashCode();
         }
 
     }
@@ -279,6 +276,23 @@ namespace sprint01
         public override string ToString()
         {
             return $"{name} {passportNumber}";
+        }
+    }
+
+    class OutTest
+    {
+        int num = 5;
+        public void OutTest1(out int num)
+        {
+
+            num = 23;
+        }
+        public void OutTest2()
+        {
+            OutTest1(out int num2);
+
+
+            //OutTest1(out int num1=23);
         }
     }
 }
