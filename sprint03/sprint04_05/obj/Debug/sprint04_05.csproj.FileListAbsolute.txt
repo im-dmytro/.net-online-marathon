@@ -1,0 +1,6 @@
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint03\sprint04_05\bin\Debug\sprint04_05.exe.config
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint03\sprint04_05\bin\Debug\sprint04_05.exe
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint03\sprint04_05\bin\Debug\sprint04_05.pdb
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint03\sprint04_05\obj\Debug\sprint04_05.csproj.CoreCompileInputs.cache
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint03\sprint04_05\obj\Debug\sprint04_05.exe
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint03\sprint04_05\obj\Debug\sprint04_05.pdb
