@@ -9,7 +9,6 @@ namespace sprint03_05
     
      class EventProgram
     {
-       public event EventHandler mewo; 
         public event EventHandler Show;
         public EventProgram()
         {
