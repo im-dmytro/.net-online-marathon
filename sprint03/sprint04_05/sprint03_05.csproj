@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E5AC2C59-701A-4B26-9E70-4C2BECD4331C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>sprint04_05</RootNamespace>
-    <AssemblyName>sprint04_05</AssemblyName>
+    <RootNamespace>sprint03_05</RootNamespace>
+    <AssemblyName>sprint03_05</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

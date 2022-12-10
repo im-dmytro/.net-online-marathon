@@ -10,13 +10,7 @@ namespace sprint03_02
     {
         public static int WordCount(this string value)
         {
-            var words=value.Split(' ',',','.', '?', '!', '-', ';', ':', ',').ToList();
-            int wordCount = 0;
-            foreach (var item in words)
-            {
-                if (item.Length > 0) { wordCount++; }
-            }
-            return wordCount;
+            return value.Split(new char[] { ' ', ',', '.', '?', '!', '-', ';', ':', ',' }, StringSplitOptions.RemoveEmptyEntries).Length;
         }
     }
     class Program
