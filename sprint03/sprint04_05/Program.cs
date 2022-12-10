@@ -18,23 +18,10 @@ namespace sprint03_05
             Show += Elephant;
             Show(this, null);
         }
-        public static void Dog(object sender, EventArgs e)
-        {
-            Console.WriteLine("Dog");
-        }
-        public static void Cat(object sender, EventArgs e)
-        {
-            Console.WriteLine("Cat");
-        }
-        public static void Mouse(object sender, EventArgs e)
-        {
-            Console.WriteLine("Mouse");
-        }
-        public static void Elephant(object sender, EventArgs e)
-        {
-            Console.WriteLine("Elephant");
-        }
-
+        public static void Dog(object sender, EventArgs e)=> Console.WriteLine("Dog");
+        public static void Cat(object sender, EventArgs e)=> Console.WriteLine("Cat");
+        public static void Mouse(object sender, EventArgs e)=> Console.WriteLine("Mouse");
+        public static void Elephant(object sender, EventArgs e)=> Console.WriteLine("Elephant");
     }
     class Program
     {
