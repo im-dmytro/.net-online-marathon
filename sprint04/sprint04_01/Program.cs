@@ -2,30 +2,22 @@
 
 namespace sprint04_01
 {
-    interface ISimmable
-    {
-        void Swim()
-        {
-            Console.WriteLine("I can swim!");
-        }
-    }
-    interface IFlyable
-    {
-        public int MaxHeight { get { return 0; }  }
-        void Fly()
-        {
-            Console.WriteLine($"I can fly at {MaxHeight} meters height");
-        }
-    }
-    interface ISimmeble
-    {
 
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IAnimal cat = new Cat();
+            cat.Voice();
+            cat.ShowInfo();
+            
+            IRunnable cat1 = new Cat();
+            cat1.Run();
+           
+            var kitty = new Cat();
+           
+            Console.ReadLine();
+
         }
     }
 }

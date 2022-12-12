@@ -17,11 +17,9 @@ namespace sprint03_04
     }
         static class IEnumerableExtensions
     {
-        public static string Join<T>(this IEnumerable<T> enumeration, string separator) => string.Join(separator, enumeration);
         public static string ToString<T>(this IEnumerable<T> instance)
         {
-            string result = instance.Join<T>(", ");
-            return $"[{result}]";
+            return $"[{string.Join(", ", instance)}]";
         }
     }
     class Program
