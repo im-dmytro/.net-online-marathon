@@ -1,0 +1,16 @@
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\bin\Debug\net5.0\sprint04_04.exe
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\bin\Debug\net5.0\sprint04_04.deps.json
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\bin\Debug\net5.0\sprint04_04.runtimeconfig.json
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\bin\Debug\net5.0\sprint04_04.runtimeconfig.dev.json
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\bin\Debug\net5.0\sprint04_04.dll
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\bin\Debug\net5.0\ref\sprint04_04.dll
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\bin\Debug\net5.0\sprint04_04.pdb
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\obj\Debug\net5.0\sprint04_04.csproj.AssemblyReference.cache
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\obj\Debug\net5.0\sprint04_04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\obj\Debug\net5.0\sprint04_04.AssemblyInfoInputs.cache
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\obj\Debug\net5.0\sprint04_04.AssemblyInfo.cs
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\obj\Debug\net5.0\sprint04_04.csproj.CoreCompileInputs.cache
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\obj\Debug\net5.0\sprint04_04.dll
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\obj\Debug\net5.0\ref\sprint04_04.dll
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\obj\Debug\net5.0\sprint04_04.pdb
+C:\Users\Админ\Documents\GitHub\.net-online-marathon\sprint04\sprint04_04\obj\Debug\net5.0\sprint04_04.genruntimeconfig.cache
