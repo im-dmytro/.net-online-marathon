@@ -13,22 +13,14 @@ namespace sprint03_01
 
         public static double Calc(double num1, double num2, char operatorSign)
         {
-            if (num2 == 0) { return 0; }
-            switch (operatorSign)
+            return operatorSign switch
             {
-                case '+':
-                    return num1 + num2;
-                   
-                case '-':
-                    return num1 - num2;
-                case '/':
-                    return num1 / num2;
-                case '*':
-                    return num1 * num2;
-                default:
-                    return 0;
-                   
-            }
+                '+' => num1 + num2,
+                '-' => num1 - num2,
+                '/' => num2 == 0 ? 0 : num1 / num2,
+                '*' => num1 * num2,
+                _ => 0;
+            };
         }
 
     }
@@ -41,8 +33,8 @@ namespace sprint03_01
             CalcProgram calc = new CalcProgram();
             Console.WriteLine(calc.funcCalc(24, 25, '+'));
             Console.ReadLine();
-            
-  
-    }
+
+
+        }
     }
 }

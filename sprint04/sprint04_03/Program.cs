@@ -63,10 +63,40 @@ namespace sprint04_03
             Console.WriteLine(doc1.Name);
         }
     }
+
+    interface A
+    {
+        void Hello() { Console.WriteLine("Eaa"); }
+
+    }
+    interface B
+    {
+        void Hello() { Console.WriteLine("EEEE"); }
+    }
+    class Test : A,B
+    {
+        public void Hello()
+        {
+            Console.WriteLine("MoewAAA");
+
+        }
+        void B.Hello()
+        {
+            Console.WriteLine("MoewB");
+
+        }
+        void A.Hello()
+        {
+            Console.WriteLine("MoewA");
+
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
+            Test test = new Test();
+            test.Hello();
             Console.WriteLine("Hello World!");
             Example.Do();
         }

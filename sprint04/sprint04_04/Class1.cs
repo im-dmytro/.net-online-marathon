@@ -56,7 +56,7 @@ namespace sprint04_04
         public double Length1 { get; set; }
         public double Length2 { get; set; }
         public double Width { get; set; }
-        public double Area() => (Length1 + Length2) * 0.5f * Width;
+        public double Area() => (Length1 + Length2) * 0.5f * Width+5;
         public object Clone() => new Trapezoid()
         {
             Length1 = Length1,
