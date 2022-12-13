@@ -28,8 +28,9 @@ namespace sprint04_04
         };
 
     }
-    class Room<T> : ICloneable, IComparable where T : class, IShape
+    class Room<T> : ICloneable, IComparable<Room<T>> where T : class, IShape 
     {
+        
         public double Height { get; set; }
         public T Floor { get; set; }
 
@@ -37,14 +38,12 @@ namespace sprint04_04
         {
             return Floor.Area() * Height;
         }
-
         public object Clone() => new Room<T>() { Height = Height, Floor = Floor.Clone() as T };
-        public int CompareTo(object other)
+        public int CompareTo(Room<T> other)
         {
-            var itemShape = other as Room<T>;
             if (other is null) 
                 throw new ArgumentException("Not correct values");
-            return Floor.Area().CompareTo(itemShape.Floor.Area());
+            return Floor.Area().CompareTo(other.Floor.Area());
         }
     }
     class RoomComparerByVolume<T> : IComparer<Room<T>> where T : class, IShape
@@ -58,9 +57,9 @@ namespace sprint04_04
     }
     class Trapezoid : IShape
     {
+        public double Length1 { get; set; }
         public double Length2 { get; set; }
         public double Width { get; set; }
-        public double Length1 { get; set; }
 
         public double Area()
         {
