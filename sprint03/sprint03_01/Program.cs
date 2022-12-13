@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace sprint03_01
 {
@@ -19,7 +17,7 @@ namespace sprint03_01
                 '-' => num1 - num2,
                 '/' => num2 == 0 ? 0 : num1 / num2,
                 '*' => num1 * num2,
-                _ => 0;
+                _ => 0
             };
         }
 
