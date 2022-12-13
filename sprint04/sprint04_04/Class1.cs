@@ -17,10 +17,7 @@ namespace sprint04_04
     {
         public double Width { get; set; }
         public double Length { get; set; }
-        public double Area()
-        {
-            return Width * Length;
-        }
+        public double Area() => Width * Length;
         public object Clone() => new Rectangle()
         {
             Length = Length,
@@ -28,9 +25,8 @@ namespace sprint04_04
         };
 
     }
-    class Room<T> : ICloneable, IComparable<Room<T>> where T : class, IShape 
+    class Room<T> : ICloneable, IComparable where T :  IShape 
     {
-        
         public double Height { get; set; }
         public T Floor { get; set; }
 
@@ -38,15 +34,15 @@ namespace sprint04_04
         {
             return Floor.Area() * Height;
         }
-        public object Clone() => new Room<T>() { Height = Height, Floor = Floor.Clone() as T };
-        public int CompareTo(Room<T> other)
+        public object Clone() => new Room<T>() { Height = Height, Floor = (T)Floor.Clone()  };
+        public int CompareTo(object other)
         {
             if (other is null) 
                 throw new ArgumentException("Not correct values");
-            return Floor.Area().CompareTo(other.Floor.Area());
+            return Floor.Area().CompareTo((other as Room<T>).Floor.Area());
         }
     }
-    class RoomComparerByVolume<T> : IComparer<Room<T>> where T : class, IShape
+    class RoomComparerByVolume<T> : IComparer<Room<T>> where T :  IShape
     {
         public int Compare(Room<T>? s1, Room<T>? s2)
         {
@@ -60,12 +56,7 @@ namespace sprint04_04
         public double Length1 { get; set; }
         public double Length2 { get; set; }
         public double Width { get; set; }
-
-        public double Area()
-        {
-            return Length1 * Length2 * 0.5 * Width;
-        }
-
+        public double Area() => (Length1 + Length2) * 0.5f * Width;
         public object Clone() => new Trapezoid()
         {
             Length1 = Length1,
