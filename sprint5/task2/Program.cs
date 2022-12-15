@@ -8,27 +8,31 @@
         }
         public static void SearchValues(this Dictionary<string, string> persons)
         {
-            foreach (var person in persons)
-            {
-                Console.WriteLine(person.Value);
-            }
+            PrintElements(persons.Values);
         }
         public static void SearchAdmin(this Dictionary<string, string> persons)
         {
-            foreach (var person in persons)
-            {
-                if(person.Value=="Admin")
-                    Console.WriteLine($"{person.Key} {person.Value}");
-            }
+            PrintPairs(persons.Where(x => x.Value == "Admin"));
         }
-        public static void PrintElements(this IEnumerable<string> persons)
+        public static void PrintElements(this IEnumerable<string> items)
         {
-            foreach (var item in persons)
+            foreach (var item in items)
             {
                 Console.WriteLine(item);
             }
         }
+        public static void PrintPairs(this IEnumerable<KeyValuePair<string, string>> itemPairs)
+        {
+            if (itemPairs is null)
+            {
+                throw new ArgumentNullException(nameof(itemPairs));
+            }
 
+            foreach (var itemPair in itemPairs)
+            {
+                Console.WriteLine($"{itemPair.Key} {itemPair.Value}");
+            }
+        }
         static void Main(string[] args)
         {
             Dictionary<string, string> persons = new Dictionary<string, string>();
