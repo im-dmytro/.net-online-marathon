@@ -12,7 +12,7 @@ namespace sprint03_05
         public event EventHandler Show;
         public EventProgram()
         {
-            Show += Dog;
+            Show +=new EventHandler(Dog);
             Show += Cat;
             Show += Mouse;
             Show += Elephant;
