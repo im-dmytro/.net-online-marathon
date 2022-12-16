@@ -6,14 +6,12 @@ class MyUtils
     public static bool ListDictionaryCompare(List<string> strings,
         Dictionary<string, string> pairs)
     {
-        if (strings.Count == 0 || pairs.Count == 0) return false;
-
         var distinctList = strings.DistinctBy(x => x.Trim()).ToList();
         var distinctPairsList = pairs.Values.DistinctBy(x => x.Trim()).ToList();
         if (distinctList.Count != distinctPairsList.Count) return false;
         foreach (var item in distinctPairsList)
         {
-            if (!strings.Contains(item)) { return false; }
+            if (!distinctList.Contains(item)) { return false; }
         }
         return true;
     }
