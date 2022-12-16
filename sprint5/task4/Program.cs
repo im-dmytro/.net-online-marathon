@@ -10,7 +10,7 @@ class MyUtils
 
         var distinctList = strings.DistinctBy(x => x.Trim()).ToList();
         var distinctPairsList = pairs.Values.DistinctBy(x => x.Trim()).ToList();
-        if (distinctList.Count < pairs.Count) return false;
+        if (distinctList.Count != distinctPairsList.Count) return false;
         foreach (var item in distinctPairsList)
         {
             if (!strings.Contains(item)) { return false; }
