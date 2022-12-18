@@ -9,7 +9,7 @@ namespace Task1
     public class Book { public int Id { get; set; } }
     public class Library
     {
-        private Book[] books=new Book[10];
+        private Book[] books = new Book[10];
 
         //some code
 
@@ -17,7 +17,7 @@ namespace Task1
         {
             for (int i = 0; i < books.Length; i++)
             {
-                books[i]=new Book();
+                books[i] = new Book();
                 books[i].Id = i;
                 yield return books[i];
             }
@@ -57,8 +57,6 @@ namespace Task1
                 countOfChildren = circleOfChildren.Count;
             }
 
-
-
             for (int i = syllablesCount; true; i += syllablesCount)
             {
                 while (i >= circleOfChildren.Count)
@@ -71,8 +69,6 @@ namespace Task1
                     || (exitOrder.Count == countOfChildren && !isChildrenLeaveCrcl))
                     return exitOrder;
             }
-
-
         }
         public IEnumerable GetChildrenInOrder(int syllablesCount)
         {
