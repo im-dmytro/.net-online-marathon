@@ -22,7 +22,7 @@ namespace additional_task
         }
         public static HashSet<Student> GetCommonStudents(List<Student> studentsList1, List<Student> studentsList2)
         {
-            
+
             HashSet<Student> students = new HashSet<Student>(studentsList1);
             students.IntersectWith(studentsList2);
             return students;
@@ -46,29 +46,30 @@ namespace additional_task
     internal class Program
     {
 
-        static void Main(string[] args)
-        {
-            List<int> numbers=new List<int>();
-            numbers.Add(19);
-            numbers.Add(21);
-            numbers.Add(13);
-            numbers.Add(9);
-            numbers.Add(32);
-            for (int i = 0; i < numbers.Count; i++)
-            {
-                if (numbers[i] > 20)
-                {
-                    numbers.RemoveAt(i);
-                    i--;
-                }
+    static void Main(string[] args)
+    {
 
-            }
-            numbers.Insert(2, 1);
-            numbers.Sort();
-            foreach (var number in numbers)
+            List<int> numbers = new List<int>();
+        numbers.Add(19);
+        numbers.Add(21);
+        numbers.Add(13);
+        numbers.Add(9);
+        numbers.Add(32);
+        for (int i = 0; i < numbers.Count; i++)
+        {
+            if (numbers[i] > 20)
             {
-                Console.Write(number);
+                numbers.RemoveAt(i);
+                i--;
             }
+
+        }
+        numbers.Insert(2, 1);
+        numbers.Sort();
+        foreach (var number in numbers)
+        {
+            Console.Write(number);
         }
     }
+}
 }
