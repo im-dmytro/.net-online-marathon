@@ -2,12 +2,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace Task1
 {
+    public class Book { public int Id { get; set; } }
+    public class Library
+    {
+        private Book[] books=new Book[10];
 
+        //some code
+
+        public IEnumerable<Book> GеtEnumeratоr()
+        {
+            for (int i = 0; i < books.Length; i++)
+            {
+                books[i]=new Book();
+                books[i].Id = i;
+                yield return books[i];
+            }
+        }
+    }
+    static class GetBook
+    {
+        public static void PrintBooks()
+        {
+            Library library = new Library();
+            foreach (var item in library.GеtEnumeratоr())
+            {
+                Console.WriteLine(item.Id);
+            }
+        }
+    }
     public class CircleOfChildren
     {
+
         List<string> circleOfChildren;
         public CircleOfChildren(IEnumerable<string> circleOfChildren)
         {
@@ -68,7 +97,7 @@ namespace Task1
         {
             foreach (var children in circleOfChildren)
             {
-                Console.Write(children+" ");
+                Console.Write(children + " ");
             }
         }
     }
@@ -78,8 +107,8 @@ namespace Task1
         {
             OutputUtils.ExitOutput(
                 new CircleOfChildren(new List<string>() { "1", "2", "3", "4", "5", }), 3, 18);
-            
-            }
+            GetBook.PrintBooks();
+        }
 
 
     }
