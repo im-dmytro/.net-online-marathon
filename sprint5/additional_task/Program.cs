@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace additional_task
 {
@@ -22,10 +23,11 @@ namespace additional_task
         }
         public static HashSet<Student> GetCommonStudents(List<Student> studentsList1, List<Student> studentsList2)
         {
-
             HashSet<Student> students = new HashSet<Student>(studentsList1);
             students.IntersectWith(studentsList2);
             return students;
+            // return studentsList1.Intersect(studentsList2).ToHashSet();
+            //погано тим що при нал листах будуть ексепшени.
         }
         public override bool Equals(object obj)
         {
@@ -51,7 +53,7 @@ namespace additional_task
 
             List<int> numbers = new List<int>();
         numbers.Add(19);
-        numbers.Add(21);
+        numbers.Add(3);
         numbers.Add(13);
         numbers.Add(9);
         numbers.Add(32);

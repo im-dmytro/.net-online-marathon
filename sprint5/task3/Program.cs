@@ -6,11 +6,13 @@ class Product
     public string? Name { get; set; }
     public string? Category { get; set; }
     public decimal Price { get; set; }
+    
     public static void TotalPrice(ILookup<string, Product> lookup)
     {
+        
         foreach (var group in lookup)
         {
-            foreach (var item in lookup[group.Key])
+            foreach (var item in group)
             {
                 Console.WriteLine($"{item.Name} {item.Price}");
             }

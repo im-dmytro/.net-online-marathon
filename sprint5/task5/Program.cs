@@ -8,12 +8,10 @@ namespace task5
     {
         public static Dictionary<string, List<string>> ReverseNotebook(Dictionary<string, string> phonesToNames)
         {
-            foreach (var item in phonesToNames) 
-                if (String.IsNullOrEmpty(item.Value)) phonesToNames[item.Key] = ""; 
 
            return 
                phonesToNames
-                .ToLookup(x => x.Value, x => x.Key)
+                .ToLookup(x => x.Value ?? "", x => x.Key)
                 .ToDictionary(x => x.Key, x => x.ToList());
 
         }

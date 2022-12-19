@@ -14,6 +14,7 @@ namespace task1
         {
             numbers.RemoveAll(x => x > 20);
             PrintList(numbers);
+            
         }
         public static void PrintList(this List<int> numbers)
         {

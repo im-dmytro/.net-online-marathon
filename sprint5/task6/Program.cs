@@ -11,7 +11,9 @@ namespace task6
             foreach (var item in phonesToNames)
                 if (String.IsNullOrEmpty(item.Value)) phonesToNames[item.Key] = "";
 
-            return (Lookup<string,string>)phonesToNames.ToLookup(x => x.Value, x => x.Key);
+            return (Lookup<string,string>)phonesToNames
+                .ToLookup(x => x.Value, x => x.Key);
+
         }
     }
     internal class Program
