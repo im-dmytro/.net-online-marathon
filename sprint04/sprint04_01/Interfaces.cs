@@ -15,7 +15,7 @@ namespace sprint04_01
     }
     public interface IFlyable
     {
-        public int MaxHeight { get { return 0; } }
+        int MaxHeight { get { return 0; } }
         void Fly()
         {
             Console.WriteLine($"I can fly at {MaxHeight} meters height!");
@@ -23,8 +23,8 @@ namespace sprint04_01
     }
     public interface IRunnable
     {
-        public int MaxSpeed { get { return 0; }  }
-        public void Run()
+        int MaxSpeed { get { return 0; }  }
+        void Run()
         {
             Console.WriteLine($"I can run up to {MaxSpeed} kilometers per hour!");
         }

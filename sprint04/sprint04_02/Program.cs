@@ -5,7 +5,6 @@ namespace sprint04_02
     interface IAnimal
     {
         void Voice();
-
         void Feed();
         public string Name { get; set; }
     }

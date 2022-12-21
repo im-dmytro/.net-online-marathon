@@ -10,57 +10,46 @@ namespace sprint04_03
     }
     public interface IColoured
     {
-         ColourEnum Colour { get { return ColourEnum.Red; } }
-        void IColoured()
-        {
-
-        }
+        ColourEnum Colour { get { return ColourEnum.Red; } }
     }
     public interface IDocument
     {
         static string defaultText = "Lorem ipsum";
-         int Pages { get; set; }
-         string Name { set; get; }
+        int Pages { get { return 0; } set { } }
+        string Name { set; get; }
         void AddPages(int value)
         {
-            Pages+=value;
+            Pages += value;
         }
         void Rename(string value)
         {
             Name = value;
         }
-        void IDocument()
-        {
-            
-        }
     }
-  
+
     public class ColouredDocument : IDocument, IColoured
     {
-        string name;
-        public string Name { get=>name; set=>name=value; }
-        public ColourEnum Colour { get; set; }
-        int pages = 0;
-        public int Pages { get => pages; set=>pages=value; }
-        public ColouredDocument(ColourEnum colour) 
+        public string Name { get; set; }
+        public ColourEnum Colour { get; }
+        public int Pages { get; set; }
+        public ColouredDocument(ColourEnum colour)
         {
             Colour = colour;
         }
         public ColouredDocument()
         {
-                
+
         }
-
-
     }
     public class Example
     {
         public static void Do()
         {
-            IDocument doc1 = new ColouredDocument(ColourEnum.Blue) {Name="Document1"};
+            IDocument doc1 = new ColouredDocument(ColourEnum.Blue) { Name = "Document1" };
             Console.WriteLine(doc1.Name);
             doc1.Rename("Document2");
-            Console.WriteLine(doc1.Name);
+            doc1.Pages = 234;
+            Console.WriteLine(doc1.Name+" "+ doc1.Pages);
         }
     }
 
@@ -73,7 +62,7 @@ namespace sprint04_03
     {
         void Hello() { Console.WriteLine("EEEE"); }
     }
-    class Test : A,B
+    class Test : A, B
     {
         public void Hello()
         {

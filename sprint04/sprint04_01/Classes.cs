@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace sprint04_01
 {
-    public class Cat: IAnimal, IRunnable
+    public class Cat : IAnimal, IRunnable
     {
-        int maxSpeed = 12;
-        public int MaxSpeed { get { return maxSpeed; } set { maxSpeed = value; } }
-        int lifeDuration = 14;
-        public int LifeDuration { get { return lifeDuration; } set { lifeDuration = value; } }
-
+        public int MaxSpeed { get; set; } = 12;
+        public int LifeDuration { get; set; } = 14;
         public void Voice()
         {
             Console.WriteLine("Meow!");
@@ -20,17 +17,12 @@ namespace sprint04_01
     }
     public class Shark : IAnimal, ISwimmable
     {
-        int lifeDuration = 25;
-        public int LifeDuration { get { return lifeDuration; } set { lifeDuration = value; } }
-
+        public int LifeDuration { get; set; } = 24;
     }
     public class Eagle : IAnimal, IFlyable
     {
-        int lifeDuration = 25;
-        public int LifeDuration { get { return lifeDuration; } set { lifeDuration = value; } }
-
-        int maxHeight = 320;
-        public int MaxHeight { get { return maxHeight; } set { maxHeight = value; } }
+        public int LifeDuration { get; set; } = 12;
+        public int MaxHeight { get; set; } = 210;
 
     }
 }
